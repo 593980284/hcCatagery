@@ -17,26 +17,33 @@ typedef UIView *(^StringBlock_hc)(NSString * text);
 typedef UIView *(^TapBlock_hc)(id target, SEL sel);
 typedef UIView *(^ButtonTextBlock_hc)(UIColor *textColor, NSString *title, UIFont  *font);
 @interface UIView (chainUI)
+//所有UIView
 /** 设置阴影 */
-@property(nonatomic, copy) ShadowBlock_hc hcShadowBlock;
-/** 设置text */
-@property(nonatomic, copy) TextBlock_hc hcTextBlock;
+- (ShadowBlock_hc)hcShadowBlock;
 /** 设置边框 */
-@property(nonatomic, copy) BorderBlock_hc hcBorderBlock;
+- (BorderBlock_hc)hcBorderBlock;
 /** 设置圆角 */
-@property(nonatomic, copy) CornerRadiusBlock_hc hcCornerRadiusBlock;
+- (CornerRadiusBlock_hc)hcCornerRadiusBlock;
 /** 设置背景色 */
-@property(nonatomic, copy) ColorBlock_hc hcBgColorBlock;
+- (ColorBlock_hc)hcBgColorBlock;
 /** 设置点击事件 */
-@property(nonatomic, copy) TapBlock_hc hcTapBlock;
+- (TapBlock_hc)hcTapBlock;
+
+//UILabel及子类
+/** 设置text*/
+- (TextBlock_hc)hcTextBlock;
+
+//UIImageView及子类
 /** 设置图片 */
-@property(nonatomic, copy) StringBlock_hc hcImageBlock;
-/** 设置按钮正常文字 */
-@property(nonatomic, copy) ButtonTextBlock_hc hcNomalTextBlock;
+- (StringBlock_hc)hcImageBlock;
+
+//UIButton
+/** 设置按钮正常文字*/
+- (ButtonTextBlock_hc)hcNomalTextBlock;
 /** 设置按钮选中文字 */
-@property(nonatomic, copy) ButtonTextBlock_hc hcSelectTextBlock;
+- (ButtonTextBlock_hc)hcSelectTextBlock;
 /** 设置按钮不可用文字 */
-@property(nonatomic, copy) ButtonTextBlock_hc hcDisabledTextBlock;
+- (ButtonTextBlock_hc)hcDisabledTextBlock;
 @end
 
 
