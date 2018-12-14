@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - hcCatagery (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - hcCatagery (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  hcCatagery:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  hcCatagery: f50e9c7167592d395de45ed1483ab403c362287f
+
+PODFILE CHECKSUM: fac378860da29cfc6244e4632dba92a7c490f58e
+
+COCOAPODS: 1.5.3

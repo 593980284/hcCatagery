@@ -1,0 +1,6 @@
+framework module hcCatagery {
+  umbrella header "hcCatagery-umbrella.h"
+
+  export *
+  module * { export * }
+}
